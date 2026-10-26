@@ -3,8 +3,11 @@ def calcular_total(subtotal, codigo_descuento=None):
         raise ValueError("El subtotal no puede ser negativo")
     
     total = subtotal
+   # if codigo_descuento == "DESC10":
+   #     total = subtotal * 0.90  # 10% de descuento
+   # <-- El error introducido
     if codigo_descuento == "DESC10":
-        total = subtotal * 0.90  # 10% de descuento
+        total = subtotal * 0.95  
     elif codigo_descuento == "DESC20":
         total = subtotal * 0.80  # 20% de descuento
         
